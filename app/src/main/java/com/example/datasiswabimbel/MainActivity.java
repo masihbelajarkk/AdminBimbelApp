@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(todetais);
             }
         });
-        //dispay data by filter
+        //display data by filter
         EditText et = (EditText) findViewById(R.id.myFilter);
         et.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         });
         adapter.setFilterQueryProvider(new FilterQueryProvider() {
             public Cursor runQuery(CharSequence constraint) {
-                return db.fetchdatabyfilter(constraint.toString(),"name");
+                return db.fetchdatabyfilter(constraint.toString(),"nama");
             }
         });
     }
